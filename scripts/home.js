@@ -320,19 +320,24 @@
 
 const container = document.getElementById("reviewsContainer");
 
-reviews.forEach(review => {
-  container.innerHTML += `
-    <div class="review-card">
-      <p class="review-text">"${review.text}"</p>
-      <div class="review-footer">
-        <span class="review-name">${review.name}</span>
-        <span class="review-stars">${review.stars}</span>
+if (container) {
+  reviews.forEach(review => {
+    container.innerHTML += `
+      <div class="review-card">
+        <p class="review-text">"${review.text}"</p>
+        <div class="review-footer">
+          <span class="review-name">${review.name}</span>
+          <span class="review-stars">${review.stars}</span>
+        </div>
       </div>
-    </div>
-  `;
-});
+    `;
+  });
+}
+
 const productsLink = document.querySelector('.dropdown > a');
-productsLink.addEventListener('click', function (e) {
-  e.preventDefault();
-  this.parentElement.classList.toggle('open');
-});
+if (productsLink) {
+  productsLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.parentElement.classList.toggle('open');
+  });
+}
