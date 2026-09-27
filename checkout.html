@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout • StyleHub Clothing</title>
+  <meta name="description" content="Complete your StyleHub order.">
+  <meta property="og:title" content="StyleHub Checkout">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/checkout.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </label>
+      
+      <nav id="primary-navigation" class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="#">Products ▾</a>
+              <ul class="dropdown-menu">
+              <li><a href="products.html">Hoodies</a></li>
+              <li><a href="sweatpants.html">Sweatpants</a></li>
+              </ul>
+          </li>
+        </ul>
+        <a href="index.html" class="logo">Style Hub</a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="cart-button" id="cart-button" aria-label="Open cart" aria-haspopup="dialog">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" aria-labelledby="co-title">
+      <h1 id="co-title">Checkout</h1>
+      
+      <div class="checkout-grid">
+        <div class="panel">
+          <h2>Order Summary</h2>
+          <div id="order-items"></div>
+          <div class="summary-total" id="order-total"></div>
+          <div style="margin-top:12px;display:flex;gap:12px">
+            <a class="btn btn-outline" href="products.html">Back to Catalog</a>
+          </div>
+        </div>
+        
+        <form id="checkout-form" class="panel" novalidate>
+          <h2>Shipping & Payment</h2>
+          
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" class="input" type="text" placeholder="Your name" tabindex="1">
+            <div id="name-error" class="error" aria-live="polite"></div>
+          </div>
+          
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" class="input" type="email" placeholder="you@example.com" tabindex="2">
+            <div id="email-error" class="error" aria-live="polite"></div>
+          </div>
+          
+          <div class="field inline">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" class="input" type="tel" placeholder="" tabindex="3">
+              <div id="phone-error" class="error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="zip">ZIP</label>
+              <input id="zip" class="input" type="text" placeholder="" tabindex="4">
+              <div id="zip-error" class="error" aria-live="polite"></div>
+            </div>
+          </div>
+          
+          <div class="field">
+            <label for="address">Address</label>
+            <input id="address" class="input" type="text" placeholder="Street, number" tabindex="5">
+            <div id="address-error" class="error" aria-live="polite"></div>
+          </div>
+          
+          <div class="field inline">
+            <div class="field">
+              <label for="city">City</label>
+              <select id="city" class="input" aria-label="Select city" tabindex="7">
+                <option value="">Choose City</option>
+              </select>
+              <div id="city-error" class="error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="country">Country</label>
+              <select id="country" class="input" aria-label="Select country" tabindex="6">
+                <option value="">Choose Country</option>
+              </select>
+              <div id="country-error" class="error" aria-live="polite"></div>
+            </div>
+          </div>
+          
+          <div class="field">
+            <label>Payment Method</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="pay" value="card" checked> Card
+              </label>
+              <label>
+                <input type="radio" name="pay" value="cod"> Cash on delivery
+              </label>
+            </div>
+          </div>
+          
+          <div id="card-fields" class="card-fields">
+            <div class="field">
+              <label for="card">Card Number</label>
+              <input id="card" class="input" type="text" placeholder="1234 5678 9012 3456" tabindex="8" inputmode="numeric" autocomplete="cc-number">
+              <div id="card-error" class="error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="exp-month">Expiry</label>
+              <div class="field inline">
+                <div class="field">
+                  <select id="exp-month" class="input" aria-label="Expiry month" tabindex="9"></select>
+                </div>
+                <div class="field">
+                  <select id="exp-year" class="input" aria-label="Expiry year" tabindex="20"></select>
+                </div>
+              </div>
+              <div id="exp-error" class="error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="cvv">CVV</label>
+              <input id="cvv" class="input" type="text" placeholder="123" tabindex="11" inputmode="numeric" autocomplete="cc-csc">
+              <div id="cvv-error" class="error" aria-live="polite"></div>
+            </div>
+            <div class="field">
+              <label for="holder">Card Holder</label>
+              <input id="holder" class="input" type="text" placeholder="Name on card" tabindex="12" autocomplete="cc-name">
+              <div id="holder-error" class="error" aria-live="polite"></div>
+            </div>
+          </div>
+          
+          <div style="margin-top:12px">
+            <button id="place-order" type="submit" class="btn btn-primary" tabindex="13">Place Order</button>
+            <button id="reset-form" type="button" class="btn btn-outline" style="margin-inline-start:8px">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="back-to-top">Back to top</a>
+      <p>© <span id="year"></span> StyleHub</p>
+      <a href="index.html">Return Home</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  
+  <script src="scripts/checkout.js"></script>
+</body>
+</html>

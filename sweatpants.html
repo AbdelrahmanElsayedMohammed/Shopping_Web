@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sweatpants</title>
+  <meta name="description" content=" sweatpants ">
+  <meta name="keywords" content="sweetpants deals, sweatpants sale, comfortable clothing, joggers">
+  <meta property="og:title" content="StyleHub Sweetpants ">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/sweatpants.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </label>
+      <nav id="primary-navigation" class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+  <a href="#">Products ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="products.html">Hoodies</a></li>
+    <li><a href="sweatpants.html" class="active">Sweatpants</a></li>
+  </ul>
+</li>
+        </ul>
+        <a href="index.html" class="logo">Style Hub</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" id="cart-button" aria-label="Open cart" aria-haspopup="dialog">
+          <span class="cart-icon" aria-hidden="true"></span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section container" aria-labelledby="offers-title">
+      <h1 id="offers-title">Sweatpants</h1>
+      <div class="grid cards">
+        <article class="card">
+          <img src="pictures/black.jpeg" alt="Black Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Black Sweatpants</h3>
+            <p><span class="price-old">$49</span> <span class="price-new">$34</span></p>
+            <button class="add-to-cart-btn" data-product="Classic Gray Sweetpants" data-price="34">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="pictures/brown.jfif" alt="Brown Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Brown Sweatpants</h3>
+            <p><span class="price-old">$59</span> <span class="price-new">$44</span></p>
+            <button class="add-to-cart-btn" data-product="Brown Sweetpants" data-price="44">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card">
+          <img src="pictures/grey.jfif" alt="Grey Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Grey Sweatpants</h3>
+            <p><span class="price-old">$69</span> <span class="price-new">$49</span></p>
+            <button class="add-to-cart-btn" data-product="Grey Sweatpants" data-price="49">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card additional-product">
+          <img src="pictures/darkgrey.jpg" alt="Dark Grey Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Dark Grey Sweatpants</h3>
+            <p><span class="price-old">$54</span> <span class="price-new">$39</span></p>
+            <button class="add-to-cart-btn" data-product="Dark Grey Sweatpants" data-price="39">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card additional-product">
+          <img src="pictures/green.jpeg" alt="Green Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Green Sweatpants</h3>
+            <p><span class="price-old">$62</span> <span class="price-new">$47</span></p>
+            <button class="add-to-cart-btn" data-product="Green Sweatpants" data-price="47">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card additional-product">
+          <img src="pictures/white.jpg" alt="White Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>White Sweatpants</h3>
+            <p><span class="price-old">$79</span> <span class="price-new">$59</span></p>
+            <button class="add-to-cart-btn" data-product="White Sweatpants" data-price="59">Add to Cart</button>
+          </div>
+        </article>
+        
+        <article class="card additional-product">
+          <img src="pictures/navy.jpeg" alt="Navy Sweatpants" loading="lazy" decoding="async" fetchpriority="low">
+          <div class="card-body">
+            <h3>Navy Sweatpants</h3>
+            <p><span class="price-old">$65</span> <span class="price-new">$52</span></p>
+            <button class="add-to-cart-btn" data-product="Navy Sweatpants" data-price="52">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+      
+      <div class="show-more-container">
+        <button class="show-more-btn" id="show-more-btn">Show More Sweetpants (4 more)</button>
+      </div>
+      
+      <div style="text-align: center; margin-top: 30px;">
+        <a class="btn btn-primary" href="products.html">Browse Hoodies</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="back-to-top">Back to top</a>
+      <p>© <span id="year"></span> StyleHub</p>
+      <a href="index.html">Return Home</a>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-header">
+      <h2 id="cart-title">Your Cart</h2>
+      <button class="btn btn-outline" id="cart-close">Close</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">Your cart is empty.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total" id="cart-total">Total: $0</div>
+      <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="scripts/sweatpants.js"></script>
+</body>
+</html>
